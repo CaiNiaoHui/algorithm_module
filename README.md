@@ -25,7 +25,7 @@ step 2 leetcode part Q&A
 ## Install
 
 ```console
-go get github.com/spf13/viper
+go get github.com/CaiNiaoHui/algorithm_module
 ```
 
 ## how to use algorithm?
