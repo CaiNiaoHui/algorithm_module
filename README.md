@@ -33,6 +33,28 @@ go get github.com/CaiNiaoHui/algorithm_module
 Examples:
 
 ```go
-algorithm_module.binary_tree.package.Bfs_levelOrder(Tree)
-algorithm_module.binary_tree.package.MaxPathSum(Tree)
+binary_tree := &tree.TreeNode{
+	Value: 1,
+	Left:  &tree.TreeNode{
+		Value: 2,
+		Left:  nil,
+		Right: &tree.TreeNode{
+			Value: 3,
+			Left:  nil,
+			Right: nil,
+		},
+	},
+	Right: nil,
+}
+
+result := tree.Bfs_levelOrder(binary_tree)
+
+// bfs层序遍历
+fmt.Printf("bfs层序遍历树: ")
+for _, list := range result {
+	for _, val := range list {
+		fmt.Printf("%d ", val)
+	}
+}
+fmt.Println()
 ```
