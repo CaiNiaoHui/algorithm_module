@@ -1,8 +1,9 @@
 package main
 
 import (
-	"algorithm-go/my_patter_algorithm/binary_tree/package"
 	"fmt"
+
+	"github.com/CaiNiaoHui/algorithm_module/binary_tree/package"
 )
 
 func init() {
