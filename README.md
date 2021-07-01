@@ -25,7 +25,11 @@ step 2 leetcode part Q&A
 ## Install
 
 ```console
-go get github.com/spf13/viper
+go get github.com/CaiNiaoHui/algorithm_module
+import (
+	tree "github.com/CaiNiaoHui/algorithm_module/binary_tree/package"
+
+) 
 ```
 
 ## how to use algorithm?
@@ -33,6 +37,17 @@ go get github.com/spf13/viper
 Examples:
 
 ```go
-algorithm_module.binary_tree.package.Bfs_levelOrder(Tree)
-algorithm_module.binary_tree.package.MaxPathSum(Tree)
+
+binary_tree := &tree.TreeNode{
+		Value: 1,
+		Left:  &tree.TreeNode{
+			Value: 2,
+			Left:  nil,
+			Right: nil,
+		},
+		Right: nil,
+	}
+
+tree.Bfs_levelOrder(Tree)
+tree.MaxPathSum(Tree)
 ```
