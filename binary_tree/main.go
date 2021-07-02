@@ -13,18 +13,18 @@ func init() {
 func main() {
 	// 实例结构体
 	tree := &_package.TreeNode{
-		Value: 1,
+		Value: 3,
 		Left:  &_package.TreeNode{
-			Value: 2,
+			Value: 1,
 			Left:  nil,
 			Right: &_package.TreeNode{
-				Value: 6,
+				Value: 2,
 				Left:  nil,
 				Right: nil,
 			},
 		},
 		Right: &_package.TreeNode{
-			Value: 3,
+			Value: 6,
 			Left:  nil,
 			Right: &_package.TreeNode{
 				Value: 9,
@@ -152,5 +152,10 @@ func main() {
 		}
 	}
 	fmt.Println()
+	// bfs应用二叉搜索树
+	fmt.Printf("是否是二叉排序树: ")
+	tr := _package.Is_BST(tree)
+	fmt.Println(tr)
+
 
 }
