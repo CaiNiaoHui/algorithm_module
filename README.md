@@ -26,10 +26,12 @@ step 2 leetcode part Q&A
 
 ```console
 go get github.com/CaiNiaoHui/algorithm_module
+
 import (
 	tree "github.com/CaiNiaoHui/algorithm_module/binary_tree/package"
 
 ) 
+
 ```
 
 ## how to use algorithm?
