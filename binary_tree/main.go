@@ -143,7 +143,7 @@ func main() {
 	}
 	fmt.Println()
 
-	// bfs层序遍历从下到上
+	// bfs层序遍历Z字行遍历
 	fmt.Printf("bfs层序Z字形遍历树: ")
 	result1 = _package.Bfs_Traverse_Z(tree)
 	for _, list := range result1 {

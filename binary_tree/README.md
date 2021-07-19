@@ -1,57 +1,96 @@
-## 知识点
+### tree function use
 
-### 二叉树遍历
+1. create tree
+   ```cgo
+   tree := &_package.TreeNode{Value: 0, Left: nil, Right: nil}
+   ```
 
-**前序遍历**：**先访问根节点**，再前序遍历左子树，再前序遍历右子树
-**中序遍历**：先中序遍历左子树，**再访问根节点**，再中序遍历右子树
-**后序遍历**：先后序遍历左子树，再后序遍历右子树，**再访问根节点**
+2. Preorder traversal
+    ```gotemplate
+    _package.Preorder_recursion(tree)
+    ```
+   
+3. Non-recursive preorder traversal
+    ```gotemplate
+    result := _package.Preorder_non_recursive(tree)
+    ```
+   
+4. Midorder traversal
+    ```gotemplate
+    _package.Inorder_recursion(tree)
+    ```
+   
+5. Non-recursive Midorder traversal
+    ```gotemplate
+    result = _package.Inorder_non_recursive(tree)
+    ```
 
-注意点
+6. Postorder traversal
+    ```gotemplate
+    _package.Postorder_recursion(tree)
+    ```
+  
+7. Non-recursive Postorder traversal
+    ```gotemplate
+    result = _package.Postorder_non_recursive(tree)
+    ```
 
-- 以根访问顺序决定是什么遍历
-- 左子树都是优先右子树
-
-#### 前序递归
-
-- watch "Preorder_recursion.go"
-
-#### 前序非递归
-
-- watch "Preorder_non_recursive.go"
-
-#### 中序非递归
-
-- watch "In_order_non_recursive.go"
-
-#### 后序非递归
-
-- watch "Postorder_non_recursive"
-
-#### DFS 深度搜索-从上到下
-
-- 实质就是树的先序遍历算法
-- watch "dfs_upTodown"
-
-
-#### 分治法模版
-
-```
-type ResultType []int
-
-func traversal(root *TreeNode) ResultType {
-	//nil
-	result := make(ResultType, 0)
-	if root == nil {
-		return  nil
-	}
-	// Divide
-	ResultType left := traversal(root.Left)
-	ResultType right := traversal(root.Right)
-
-	//Conquer
-	ResultType result = Merge from left and right
-
-	return result
-}
-
-```
+8. dfs traversal tree (up to down)
+    ```gotemplate
+    result = _package.Dfs_upTodown(tree)
+    ```
+   
+9. dfs divide and conquer traversing the tree (down to up)
+    ```gotemplate
+    result = _package.Dfs_downToUp(tree)
+    ```
+   
+10. bfs sequence traversal
+    ```gotemplate
+    result1 := _package.Bfs_levelOrder(tree)
+    ```
+    
+11. Merge sort
+    ```gotemplate
+    result = _package.MergeSort(arr)
+    ```
+    
+12. Quick sort
+    ```gotemplate
+    _ = _package.QuickSort(arr1)
+    ```
+    
+13. tree Maximum depth
+    ```gotemplate
+    depth := _package.MaxDepth(tree)
+    ```
+    
+14. detect balanced binary tree
+    ```gotemplate
+    depth = _package.IsBalaced(tree)
+    ```
+    
+15. travel max path
+    ```gotemplate
+    maxpath := _package.MaxPathSum(tree)
+    ```
+    
+16. bfs sequence traversal (up to down)
+    ```gotemplate
+    result1 = _package.Bfs_Traverse(tree)
+    ```
+    
+17. bfs sequence traversal (down to up)
+    ```gotemplate
+    result1 = _package.Bfs_Traverse_reverse(tree)
+    ```
+    
+18. bfs sequence traversal ('Z' glyph traversal)
+    ```gotemplate
+    result1 = _package.Bfs_Traverse_Z(tree)
+    ```
+    
+19. Judging the binary search tree
+    ```gotemplate
+    tr := _package.Is_BST(tree)
+    ```
