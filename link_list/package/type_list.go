@@ -5,3 +5,9 @@ type ListNode struct {
 	Value int
 }
 
+type ListNodeR struct {
+	Next *ListNodeR
+	Value int
+	Random *ListNodeR
+}
+

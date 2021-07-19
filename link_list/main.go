@@ -111,5 +111,55 @@ func main() {
 	fmt.Println("判断是否有环：list3")
 	fmt.Println(_package.HasCycle(list3))
 
+	list5 := &_package.ListNode{
+		Next:  &_package.ListNode{
+			Next:  &_package.ListNode{
+				Next:  &_package.ListNode{
+					Next:  &_package.ListNode{
+						Next:  nil,
+						Value: 1,
+					},
+					Value: 2,
+				},
+				Value: 3,
+			},
+			Value: 2,
+		},
+		Value: 1,
+	}
+
+	// 判断链表是否是回文链表
+	fmt.Println("判断是否是回文链表链表：list5")
+	fmt.Println(_package.IsPalidrome(list5))
+
+	// 深拷贝
+	list6 := &_package.ListNodeR{
+		Next:   &_package.ListNodeR{
+			Next:   &_package.ListNodeR{
+				Next:   &_package.ListNodeR{
+					Next:   &_package.ListNodeR{
+						Next:   &_package.ListNodeR{
+							Next:   nil,
+							Value:  3,
+							Random: nil,
+						},
+						Value:  2,
+						Random: nil,
+					},
+					Value:  1,
+					Random: nil,
+				},
+				Value:  2,
+				Random: nil,
+			},
+			Value:  3,
+			Random: nil,
+		},
+		Value:  4,
+		Random: nil,
+	}
+	list6 = _package.CopyRandomList(list6)
+	_package.Print_listR(list6)
+
 }
 

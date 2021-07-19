@@ -16,6 +16,9 @@ func quickSort(nums []int, start, end int) {
 	}
 }
 
+// 快排思想: 以最后一个节点为标记点,
+// 从第一个开始遍历数组, 比标记点小的就合第i交换i++，
+// 最后遍历完在交换i和标记
 func partition(nums []int, start, end int) int {
 	i, p := start, nums[end]
 	for j := start; j < end; j++ {
