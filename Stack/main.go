@@ -19,5 +19,4 @@ func main() {
 	s := "2[abc]3[cd]ef"
 	fmt.Println(_package.DecodeString1(s))
 
-
 }

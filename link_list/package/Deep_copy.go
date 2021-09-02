@@ -20,61 +20,33 @@ func Normal_DeepCopy2(s01 []string) []string {
 	return s02
 }
 
+func Deep_link_my(head *ListNode) *ListNode {
+	head2 := &ListNode{
+		Next:  nil,
+		Value: 0,
+	}
+	DumpyHead2 := head2
+	DumpyHead1 := head
 
-// deepCopy only copy value
-//func DeepCopyList(head *ListNode) *ListNode {
-//	newList := &ListNode{
-//		Next:  nil,
-//		Value: 0,
-//	}
-//	later := &ListNode{
-//		Next:  nil,
-//		Value: 0,
-//	}
-//	//var prev *ListNode
-//
-//	valList := make([]int, 0)
-//	_ = dfs(head, &valList)
-//	fmt.Println(valList)
-//
-//	////
-//	//newList.Value = valList[1]
-//	//later.Next = newList
-//	//newList = later
-//	//later.Next = prev // later 需要至空
-//	//
-//	////
-//	//newList.Value = valList[2]
-//	//later.Next = newList
-//
-//
-//
-//
-//	for i := 0; i < len(valList); i++ {
-//		newList.Value = valList[i]
-//		later.Next = newList
-//		copy(later, newList)
-//		//newList = later
-//		//later.Next = prev // later 需要至空
-//		//newList.Value = valList[i] // 获取值
-//		//prev = newList		// 把获取的值放到prev下
-//		//later.Next = prev	//后面节点把之前节点加入队列
-//
-//	}
-//
-//	return later.Next
-//}
-//
-//func dfs(head *ListNode, valList *[]int) *ListNode {
-//	if head == nil {
-//		return head
-//	} else {
-//		dfs(head.Next, valList)
-//		*valList = append(*valList, head.Value)
-//		//fmt.Println(head.Value)
-//	}
-//	return head
-//}
+	if DumpyHead1 == nil {
+		return DumpyHead2.Next
+	}
+	// 拷贝
+	copyL(DumpyHead1, DumpyHead2)
+
+	return head2.Next
+}
+
+func copyL(l1 *ListNode, l2 *ListNode)  {
+	if l1 == nil {
+		return
+	}
+	l2.Next = &ListNode{
+		Value: l1.Value,
+		Next:  nil,
+	}
+	copyL(l1.Next, l2.Next)
+}
 
 
 

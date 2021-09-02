@@ -133,6 +133,7 @@ func main() {
 	fmt.Println(_package.IsPalidrome(list5))
 
 	// 深拷贝
+	fmt.Println("深拷贝链表l6：list6")
 	list6 := &_package.ListNodeR{
 		Next:   &_package.ListNodeR{
 			Next:   &_package.ListNodeR{
@@ -158,8 +159,14 @@ func main() {
 		Value:  4,
 		Random: nil,
 	}
-	list6 = _package.CopyRandomList(list6)
-	_package.Print_listR(list6)
+	list7 := _package.CopyRandomList(list6)
+	_package.Print_listR(list7)
+
+	// 深拷贝
+	fmt.Println("深拷贝链表l6：list5")
+	_package.Print_list(list5)
+	list8 := _package.Deep_link_my(list5)
+	_package.Print_list(list8)
 
 }
 
